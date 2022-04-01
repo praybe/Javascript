@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //크기를 지정하지 않은 배열 객체 생성
+        var varArr1 = new Array();
+        //크기를 지정한 배열 객체 생성
+        var varArr2 = new Array(5);
+
+        //배열 생성과 데이터 저장을 동시에. 자바와 다름, {}디폴트 객체 의미
+        var varArr3 = new Array(123, "ABC", true, function fun(){}, {}, undefined);
+        //배열 생성과 데이터 저장을 동시에. 자바와 같음 
+        var varArr4 = [123, "ABC", true, function fun(){}, {}, undefined];
+
+
+        console.log("varArr1 : " + varArr1);
+        console.log("varArr2 : " + varArr2);
+        console.log("varArr3 : " + varArr3);
+        console.log("varArr4 : " + varArr4);
+
+
+        //배열 길이(크기): 변수명.length
+        var varArr5 = new Array(0, 1, 2, 3, 4, 5);
+        console.log("varArr5.length : " + varArr5.length);
+        console.log(varArr5);
+
+
+        //한 개 짜리는 데이터 길이를 나타냄. 길이length가 100인 것
+         var varArr6 = new Array(100);
+        console.log("varArr6.length : " + varArr6.length);
+        console.log(varArr6);
+
+        //indexOf 
+        var varArrIndex = new Array(123, "ABC", "가나다", "abc", "가나다", "123");
+       
+        console.log("varArrIndex.indexOf(\"가나다\") : " +
+        varArrIndex.indexOf("가나다") ); // 2
+        console.log("varArrIndex.lastIndexOf(\"가나다\") : " +
+        varArrIndex.lastIndexOf("가나다") ); // 4
+        console.log("varArrIndex.indexOf(123) : " +
+        varArrIndex.indexOf(123) ); //0
+        console.log("varArrIndex.lastIndexOf(123) : " +
+        varArrIndex.lastIndexOf(123) ); // 0
+
+
+
+        /*
+          immutable(불변), mutable(가변)을 잘 구분해야 함
+        */
+
+        //concat 좀 중요함
+        var varArrFir = new Array("ABC", "DEF", "GHI", "JKL");
+        var varArrSec = new Array("가나다", "라마바", "사아차", "카타파");
+        var varArrRes = varArrFir.concat(varArrSec);
+        console.log("varArrRes : " + varArrRes + ":" + varArrRes.length); // 8
+
+        console.log("varArrFir : " + varArrFir + ":" + varArrFir.length); //4
+        console.log("varArrSec : " + varArrSec + ":" + varArrSec.length); // 4
+        //concat은 immutable(불변)
+
+
+        //JOIN 
+        var varArrJoin = new Array("AB", "CD", "EF", "HI");
+        console.log("varArrJoin : "  + varArrJoin + ":" + varArrJoin.length);
+        // AB, CD, EF, HI : 4
+        console.log("varArrJoin : "  + varArrJoin.join() + ":" + varArrJoin.length);
+        // AB, CD, EF, HI : 4
+        console.log("varArrJoin : "  + varArrJoin + ":" + varArrJoin.length);
+        // AB, CD, EF, HI : 4
+
+        console.log("varArrJoin : "  + varArrJoin.join(" | ") + ":" + varArrJoin.length);
+        console.log("varArrJoin : "  + varArrJoin + ":" + varArrJoin.length);
+        //join 시켜봤자 immutable. 불변이다.
+
+        console.log("varArrJoin : "  + varArrJoin.join(":") + ":" + varArrJoin.length);
+
+
+        //sort()
+        var varArrSort = new Array("E", "B", "A", "C", "D");
+        console.log("varArrSortBefore : " + varArrSort);    //E,B,A,C,D
+        console.log("varArrSort : " + varArrSort.sort());   // A,B,C,D,E
+        console.log("varArrSortAfter : " + varArrSort);     // A,B,C,D,E
+        //sort는 가변(mutable)이다. 
+
+
+        //reverse()
+        var varArrReverse = new Array("E", "B", "A", "C", "D");
+        console.log("varArrReverseBefore : " + varArrReverse);    //E,B,A,C,D
+        console.log("varArrReverse : " + varArrReverse.reverse());   // D,C,A,B,E
+        console.log("varArrReverseAfter : " + varArrReverse);     // D,C,A,B,E
+        //reverse는 가변(mutable)이다. 
+
+
+        //push() 붙이는고
+        var varArrPush = new Array("ABC", "DEF");  
+        console.log("varArrPush : " + varArrPush.push("가나다", "마바사"));   // 4
+        console.log("varArrPushAfter : " + varArrPush);     // ABC,DEF,가나다,마바사
+        //push는 가변(mutable)이다. 
+
+
+        //shift() 앞에거 날리고 꺼냄, pop() 끝에거 날리고 꺼냄;
+		var varArrShiftPop = new Array("가", "나", "다", "라", "마");
+		console.log("varArrShiftPop.shift() : " + varArrShiftPop.shift()); //가
+		console.log("varArrShiftPop : " + varArrShiftPop); //나,다,라,마
+		//shift는 가변(mutable)이다..? 	
+		console.log("varArrShiftPop.pop() : " + varArrShiftPop.pop()); // 마
+		console.log("varArrShiftPop : " + varArrShiftPop); //나,다,라
+		//pop은 가변(mutable)이다...?? 
+
+		varArrShiftPop.unshift("가");
+		varArrShiftPop[varArrShiftPop.length] = "마";
+		console.log("varArrShiftPopOri : " + varArrShiftPop); //가,나,다,라,마
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

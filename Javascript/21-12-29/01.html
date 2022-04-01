@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>removeChild</title>
+    <script>
+        window.onload = () => {		
+				
+				var str = "";
+				str += "<p id='jsTitle'> javascript & node.js </p>";
+				str += "<img id='logoImg', src='./img/logo.png', ";
+				str += "width='170', height='67'> ";
+				
+				document.body.innerHTML = str;
+
+                //부모 객체를 찾은다음에 자식객체를 삭제한다. 
+
+				var titleNode = document.getElementById("jsTitle");
+                titleNode.parentNode.removeChild(titleNode); //상단 글자 삭제
+                //parentNode부분만 지우면 온동네 애들 다 같이 나옴 ㅋㅋㅋㅋ
+                //그리고 f12들어가면 에러로 나옴.
+                //즉 parentNode 빼면 에러다. 
+
+
+                var logoNode = document.getElementById("logoImg");
+                logoNode.parentNode.removeChild(logoNode); //로고 삭제
+				
+				
+			}
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

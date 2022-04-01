@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>jQuery</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <script>
+            window.onload = () => {
+
+                $("p").css("width", "500px")
+                $("p").css("height", "300px")
+                $("p").css("border", "1px solid orange");
+
+            };
+
+            window.onload = () => {
+
+                $("p").css("fontSize", "2em");
+
+            };
+
+
+            //제일 마지막 onload만 돌아간다.
+        </script>
+
+    </head>
+    <body>
+        <p>Hello jQuery</p>
+
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>클릭 이벤트; 부제 인싸되기</title>
+
+
+        <style>
+            #cEvent {
+                width: 200px;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+                font-size: 1.2em;
+                background-color: #f00;
+                color: #fff;
+                font-weight: bolder;
+            }
+        </style>
+
+        <script>
+
+            /*
+            function hearderClick(){
+                console.log("Click !!!")
+            }*/
+
+            const hearderClick = () => { //const는 상수
+                console.log("Click !!!")
+
+            }
+        </script>
+
+    </head>
+    <body>
+        <div id = "cEvent" onclick="hearderClick()"> Click event</div>
+        <!--  <div id = "cEvent" onclick="console.log('ooooooooooo')"> Click event</div>-->
+        <!--div 태그 클릭하면 함수 실행하겠다.-->
+    </body>
+</html>

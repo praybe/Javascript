@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본메서드</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function (){
+
+           /* $("p").each( (index,item) =>{
+                console.log( index + ":" + $(item).text());
+                $(item).css("background","#0000ff");
+
+            
+                } 
+            );*/
+
+         /*   // html(), text()
+            console.log("htmlMethod" + $("#htmlMethod").html());
+            console.log("textMethod : ")*/
+
+
+         //   $("#addClass").addClass("addCla");
+         //   $(".addCla").css("background", "#ff0000");
+
+           // $(".remCla").css("background","#00ff00");
+            //$("removeClass").removeClass("remCla");
+
+                //한 칸 띄웠으니까 후손
+            //$("#attrMethod img").attr("src", "logo.png");
+            //console.log( $("#attrMethod img").attr("src") );
+                    //그림 둘 다 생김
+
+            $("#attrMethod img").removeAttr("src", "logo.png");
+            console.log( $("#attrMethod img").attr("src") )
+                    //그림 둘 다 삭제 
+
+            //css() 스타일 검사 및 추가
+            $("#cssMethod").css("width", "300px").css("height", "100px")
+            $("#cssMethod").css("background", "#ff0000");
+            console.log("cssMethod css width : " + $("#cssMethod").css("width"));
+            console.log("cssMethod css height : " + $("#cssMethod").css("height"));
+            console.log("cssMethod css background : " + $("#cssMethod").css("background"));
+
+
+            //remove() 문서 객체 제거
+            //empty() 문서 객체 내부 제거
+
+
+
+        });
+    </script>
+</head>
+<body>
+    <!--<p> Hello javascript! </p>
+    <p> Hello jQuery! </p>
+    <p> Hello node.js! </p>
+    
+    <div id="htmlMethod"> html() 메서드 </div>
+    <div id="textMethod"> text() 메서드 </div>  -->
+    
+    <!-- <div id="addClass"> addClass() 메서드 </div>  -->
+    <!-- <div id="removeClass" class="remCla"> removeClass() 메서드 </div> -->
+    
+    <div id="attrMethod">
+       <img>
+       <br>
+       <img>
+    </div>
+    
+    <div id="cssMethod"> CSS METHOD </div>
+    
+    <div id="removeMthod"> Remove Object! </div>
+    <div id="emptyMthod"> Empty Object! </div>
+    
+</body>
+</html>

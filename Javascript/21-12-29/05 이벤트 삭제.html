@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>이벤트 제거</title>
+
+
+        <style>
+            #cEvent {
+                width: 200px;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+                font-size: 1.2em;
+                background-color: #f00;
+                color: #fff;
+                font-weight: bolder;
+            }
+        </style>
+
+        <script>
+
+            const hearderClick = () => { 
+                console.log("Click !!!")
+
+                //이벤트 제거
+                var ce = document.getElementById("cEvent");
+                console.log(ce);
+                ce.onclick = null; //이러면 더 이상 onclick 안 먹힘
+
+            }
+        </script>
+
+    </head>
+    <body>
+        <div id = "cEvent" onclick="hearderClick()"> Click event</div>
+
+    </body>
+</html>

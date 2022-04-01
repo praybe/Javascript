@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if, if else, switch</title>
+    <script>
+
+    /*
+        if문    
+    */
+    let varNum = 100;
+
+    if(varNum > 50){
+        console.log("varNum > 50");
+        document.write("varNum > 50" + "<br>"); //디버깅 문구, 자바스크립트만 쓸 수 있는 내장 객체
+    }
+
+    if(varNum <=50){
+        console.log("varNum <= 50");
+        document.write("varNum <= 50" + "<br>");
+    }
+
+    console.log("varNum : " + varNum);
+    document.write("varNum : " + varNum);
+
+
+
+    /*
+        if ~ else문    
+    */
+
+    if(varNum > 200){
+        console.log("if else문 > 200"); // 참이면 타고 빠져나옴
+
+    } else if(varNum > 150){
+        console.log("if else문 > 150");
+
+    } else if(varNum > 100){
+        console.log("if else문 > 100");
+
+    } else{
+        console.log("if else문 <= 100");
+
+    } 
+
+
+
+    /*
+        switch문    
+    */
+
+    varNum = "100"; //참조형이라 100이나 "100"이나 에러 안남
+    switch(varNum){
+        case "200":
+            console.log("switch : 200");
+            break;
+
+        case 150:
+            console.log("switch : 150");
+            break;
+
+        case 100:
+            console.log("switch : 100");
+            break;
+
+        case "100":
+            console.log("switch : \"100\"");
+            break;
+
+        default:
+            console.log("switch :" + varNum);
+            break;    
+    }
+
+
+
+
+    /*
+        삼항연산자
+    */
+
+    var varNum1 = "1234";
+    var varNum2 = "4321";
+
+    var varResult = (varNum1 > varNum2) ? "varNum1 > varNum2" : "varNum1 <= varNum2";
+    console.log("삼항연산자 : " + varResult);
+    //문자열이니까 사전 순
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체접근</title>
+    <script>
+
+        /*
+            객체 접근
+            속성 접근할 때 배열도 가능
+        */
+
+        var objName = { //객체는 key value 형태
+            nation : "korea",
+            capital : "seoul",
+            language : "hangeul",
+            population : 51000000,
+            nationAnthem : function(){
+                console.log("Play Korean national anthem ~~");
+            }
+            
+        };
+
+        console.log("objName.nation : " + objName.nation);
+        console.log("objName.population : " + objName.population);
+
+        console.log("objName[\"nation\"] : " + objName["nation"]);
+        console.log("objName[\"population\"] : " + objName["population"]);
+
+        objName.nationAnthem();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

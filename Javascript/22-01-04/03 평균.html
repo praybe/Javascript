@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <title>여태 배운거 종합</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <script>
+//오류 뜨는데 이유를 모르겠음... ;;;
+
+
+
+            $(document).ready( () => {
+    
+                // Grade에 대한 생성자함수 만들기
+                function Grade(kor, eng, math) {
+                    this.kor = kor;
+                    this.eng = eng;
+                    this.math = math;
+    
+                    // 나의 실수: =( () =>{}) 이렇게 씀
+                    this.sum = () => {
+                        return this.kor + this.eng + this.math;
+                    }
+    
+                    this.avg = () => {
+                        return (this.kor + this.eng + this.math) / 3.0;
+                    }
+    
+                };
+    
+                // 평균을 클릭했을 때 출력하고 싶은 값
+                $("#avg").click( () => {
+                    let kor = Number($("#kor").val());
+                    let eng = Number($("#eng").val());
+                    let math = Number($("math").val());
+    
+                    //나의 실수() 안에 , 가 아니라 +을 넣음
+                    let grade = new Grade(kor, eng, math);
+                    console.log("sum ===== : " + grade.sum());
+                    console.log("avg ===== : " + grade.avg());
+    
+    
+                    let divObj = $(
+                        '<div> 평균: ' + grade.avg() + '</div><div> 총점: ' + grade.sum() + '</div>'
+                    );
+    
+                    $("#wrap").empty(); // 안에 있는 자식태그 날리기. 청소
+                    $("#wrap").append(divObj); // 위에있는 divObj 넣겠다. 
+    
+                });
+    
+                $("#reset").click(() => {
+                    $("#wrap").empty();
+                    $("#kor").val("");
+                    $("#eng").val("");
+                    $("#math").val("");
+    
+                });
+    
+            });
+        </script>
+    </head>
+    <body>
+        <!-- 변수명 주는 방법: id 혹은 class -->
+        국어점수<input id="kor" type="text" name="kor"><br>
+        영어점수<input id="eng" type="text" name="eng"><br>
+        수학점수<input id="math" type="text" name="math"><br>
+        <input id="avg" type="button" value="평균">
+        <input id="reset" type="button" value="리셋">
+
+        <!-- 이 안에 평균 합계 값이 나오게 하겠다. -->
+        <div id="wrap">
+            <div></div>
+        </div>
+    </body>
+
+</html>

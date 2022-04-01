@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>표준 모델</title>
+
+
+        <style>
+            #cEventAdd {
+            width: 200px; height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 1.2em;
+            background-color: #f00;
+            color: #fff;
+            font-weight: bolder;
+         }
+         
+         #cEventRem {
+            width: 200px; height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 1.2em;
+            background-color: #0f0;
+            color: #fff;
+            font-weight: bolder;
+         }
+
+        </style>
+
+            
+    <script>
+
+        window.onload = () =>{
+
+            function addHandler(){
+                console.log("Click !!")
+            }
+
+            function removeHandler(){
+                console.log("event remove")
+                ceA.removeEventListener("click", addHandler); 
+                //이거 removeEventListener 추가하면 빨간거 누르고 초록 누르면 빨간거 아무리 눌러도 안돌아감
+            }
+
+            let ceA = document.querySelector("#cEventAdd");
+            ceA.addEventListener("click", addHandler); //(이벤트명, 콜백함수)
+
+
+           let ceR = document.querySelector("#cEventRem");
+           ceR.addEventListener("click", removeHandler); 
+        
+        };
+
+
+
+    </script>
+
+
+    </head>
+    <body>
+        <div id = "cEventAdd"> Click event</div>
+        <div id = "cEventRem"> Click event</div>
+        
+    </body>
+
+
+</html>

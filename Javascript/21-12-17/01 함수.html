@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 function</title>
+    <script>
+    /*
+        명시적 함수 = 자바와 거의 유사
+    */
+
+    function 함수이름(){
+       실행문;
+    }
+    //함수 이름이 있다.
+
+
+    /*String grade(int avg){
+        return "수";
+    }
+    function funName(){
+        console.log("명시적 선언입니다.")
+    }*/
+
+
+
+    /*
+        익명 함수 = 변수 이름에 다이렉트로
+    */
+
+    var 변수이름 = function(){
+       실행문;
+    }
+    //함수 이름이 없다.
+
+    var funAnonymous = function(){
+        console.log("익명함수 선언입니다.");
+    }
+
+
+
+    function funName(x, y, z) {
+				console.log("x : " + x);
+				console.log("y : " + y);
+				console.log("z : " + z);
+				
+				var result = x * y + z;
+				
+				return result;
+			}
+
+
+    var result = 0;
+    result = funName(2,3,4);
+    console.log(result);
+
+    result = funName(2,3,4,5);  //에러 안남
+    console.log(result); 
+
+    result = funName(2,3);      //에러 안남
+    console.log(result);
+    //z : undefined
+    //NaN
+
+
+            
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

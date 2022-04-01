@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var objCar = {
+            width : "3m",
+            height : "2m",
+            cc : "2000cc",
+            energy : 100,
+            speed : function(power){
+                return this.energy * power;
+            }    
+        };
+
+        console.log("objCar.speed : " + objCar.speed(2));
+        console.log("objCar.speed : " + objCar.width);
+        console.log("objCar.speed : " + objCar.cc);
+
+        
+
+        //====================================================
+        // 위에 함수 이어서 .. 
+
+
+        var print ="";
+        for(var key in objCar){
+
+            //if(typeof objCar[key] == "function") continue; 
+
+            print += key + " : " + objCar[key] + "\n"
+            console.log(print);
+        }
+
+        console.log(print);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

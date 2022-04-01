@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 만드는 다양한 방법</title>
+    <script>
+        /*
+            객체 만드는 다양한 방법
+        */
+
+        
+
+        /*
+            기본적인 객체 생성
+        */
+        var objBicycle = {
+            handle : "steel",
+            maxSpeed : "50km/h",
+            width : "200cm",
+            height : "100cm",
+            run : function(){
+                return "go!";
+            }    
+        };
+
+        console.log("objBicycle.maxSpeed : " + objBicycle.maxSpeed);
+        console.log("objBicycle.run : " + objBicycle.run());
+
+
+
+        console.log("=========================");
+
+
+        /*
+            함수 이용 객체 생성
+            React에서 자주 쓰임
+            이게 대세
+        */
+       function createCar(name, color, speed){
+
+           var carObj ={
+               name : name,
+               color : color,
+               speed : speed,
+               run : function(){
+                   return this.speed + "km/h";
+               }
+           };
+
+           return carObj;
+       };
+
+       var sorento = createCar("SORENTO", "GREY", 220);
+       
+       console.log("sorento.name : " + sorento.name);
+       console.log("sorento.run : " + sorento.run());
+
+
+       var soul = createCar("SOUL", "WHITE",180 );
+       console.log("soul.name : " + soul.name);
+       console.log("soul.run : " + soul.run());
+
+
+
+       console.log("=========================");
+
+        /*
+            생성자 이용 객체 생성
+            앞글자 무조건 대문자
+        */
+       function Airplane(name, color, speed){
+
+            // 일반함수에서 this = {}라는 객체가 생략되어있음
+
+           this.name = name;
+           this.color = color;
+           this.speed = speed;
+           this.fly = function(){
+               return this.speed + " fly!"
+           };
+
+       };
+
+       var boeing747 = new Airplane("boeing747", "white/blue", "600km/h")
+       console.log("boeing747.name : " + boeing747.name);
+       console.log("boeing747.color : " + boeing747.color);
+       console.log("boeing747.fly : " + boeing747.fly());
+
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>18-3 자주사용하는 선택자</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+
+                var wrapObj = $("#wrap");
+
+            /*
+                객체 생성
+            */
+                var divObj = $("<div> Hello jQuery! </div>");
+
+            /*
+                객체 삽입
+            */
+
+                //마지막으로 집어넣게 
+                //.appendTo()
+                divObj.appendTo(wrapObj); 
+
+                //.append() 
+                // wrapObj.append(divObj); 
+                
+                // 위에서부터 집어넣기
+                //.prependTo() 
+                // divObj.prependTo(wrapObj);
+
+                //.prepend()
+                // wrapObj.prepend(divObj); 
+
+
+
+
+                
+
+                //.insertAfter() 
+                // divObj.insertAfter(wrapObj);   
+                
+                //.after()
+                //wrapObj.after(divObj); 
+                
+                //.insertBefore()
+                // divObj.insertBefore(wrapObj);    
+                
+                // .before()
+                //wrapObj.before(divObj);
+            
+
+            });
+        </script>
+    </head>
+    <body>
+
+        <div id="wrap">
+            <div>contents</div>
+
+        </div>
+
+    </body>
+</html>

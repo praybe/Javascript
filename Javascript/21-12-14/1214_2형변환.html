@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자료형 변환</title>
+    
+    <script>
+
+        var varTemp = "123";
+        console.log("varTemp type : " + typeof(varTemp));
+        //string
+
+
+        varTemp = 123;
+        console.log("varTemp type : " + typeof(varTemp));
+        //number
+
+
+    //자료형 변환
+        var varType = "123";
+        console.log("varType type : " + typeof(varType));
+        console.log("varType : " + (varType + 1000)); //문자형 + 숫자
+        //string
+        //1231000
+
+        varType = Number(varType);
+        console.log("varType type : " + typeof(varType));
+        console.log("varType : " + (varType + 1000)); 
+        //number
+        //1123
+
+
+        varType = String(Number(varType));
+        console.log("varType type : " + typeof(varType));
+        console.log("varType : " + (varType + 1000));
+        //string
+        //1231000
+
+        
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

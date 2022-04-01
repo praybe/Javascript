@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>이벤트 마우스</title>
+        <style>
+            #mouseEvent {
+                width: 200px;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+                font-size: 1.2em;
+                background-color: #f00;
+                color: #fff;
+                font-weight: bolder;
+            }
+        </style>
+        <script>
+            window.onload = () => {
+
+                let me = document.querySelector("#mouseEvent");
+
+                /*
+
+                //클릭
+                me.addEventListener("click", ()=>{
+                    console.log("click event !!");
+                });
+
+                //마우스  공간 안으로 오면
+                me.addEventListener("mouseover", ()=>{
+                    console.log("mouseover event !!");
+                });
+
+                //마우스 공간 밖으로 나가면 
+                me.addEventListener("mouseout", ()=>{
+                    console.log("mouseout event !!");
+                });
+
+                //마우스 움직임 좌표
+                me.addEventListener("mousemove", (e)=>{
+                   // console.log("mousemove event !!");
+                    console.log("x : " + e.clientX + ", y : " + e.clientY);
+                });
+
+                */
+
+
+                //더블클릭
+                me.addEventListener("dblclick", (e)=>{
+                    console.log("dblclick event !!");
+                });
+
+
+                };
+
+        
+        </script>
+
+    </head>
+    <body>
+        <div id="mouseEvent">mouse event</div>
+
+
+    </body>
+</html>

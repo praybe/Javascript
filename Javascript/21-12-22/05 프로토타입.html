@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+    <script>
+        // javascript만의 특징인 prototype
+        // 메모리와도 관련있지만 상속
+        // 상속 = extends(자바) =prototype(js)
+
+        //선배코드에서 대문자? 생성자
+        //생성자? new써서 객체생성하자
+
+        function Scoring(player, scoreFirst,scoreSecond,scoreThird){
+
+            this.player = player;
+            this.scoreFirst = scoreFirst;
+            this.scoreSecond = scoreSecond;
+            this.scoreThird = scoreThird;
+
+        };
+
+        //프로토타입 사용하면 메모리 공유
+        Scoring.prototype.getTotal = function(){
+            return this.scoreFirst + this.scoreSecond + this.scoreThird;
+
+        };
+
+        Scoring.prototype.getAverage = function(){
+            return (this.getTotal() / 3).toFixed(3);
+
+        }
+
+        //  Number.prototype.toFixed();
+        // toFixed() 메서드는 고정 소수점 표현법
+        // toFixed(3) : xx.123까지 표현 
+
+        var player1 = new Scoring("홍길동", 99, 90, 92);
+        console.log(player1.player + "의 총점 : " + player1.getTotal());
+        console.log(player1.player + "의 평균 : " + player1.getAverage());
+
+        var player2 = new Scoring("최범규", 80, 90, 85);
+        console.log(player2.player + "의 총점 : " + player2.getTotal());
+        console.log(player2.player + "의 평균 : " + player2.getAverage());
+
+
+        var player3 = new Scoring("강태현", 87, 96, 95);
+        console.log(player3.player + "의 총점 : " + player3.getTotal());
+        console.log(player3.player + "의 평균 : " + player3.getAverage());
+
+
+        
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

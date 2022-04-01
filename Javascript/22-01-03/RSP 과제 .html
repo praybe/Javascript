@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery로 rsp만들기</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+
+	$(document).ready( () => {
+        $("#rock").click( () =>{
+            $('#imgRSP').attr("src","./img/logo.png")
+        })
+
+        $('#scissors').click( () =>{
+            $('#imgRSP').attr("src","./img/sci.png")
+        })
+
+        $('#paper').click( () =>{
+            $('#imgRSP').attr("src","./img/arm_mbed.png")
+        })
+
+    });
+
+
+    </script>
+</head>
+<body>
+    <img id="imgRSP" src="./img/logo.png">
+
+    <input id="rock" type="button" value="바위">
+    <input id="scissors" type="button" value="가위">
+    <input id="paper" type="button" value="보">
+
+                        
+    
+</body>
+</html>

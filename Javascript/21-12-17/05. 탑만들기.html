@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            탑만들기
+        </title>
+    </head>
+    <script>
+
+    /*
+		탑만들기
+	*/
+
+        function funT() {
+			
+
+            return function (x) {
+                for (let i = 1; i <= x; i++) {
+                    for (let j = i; j < x; j++) {
+                        document.write('&nbsp');
+                    }
+                    for (let j = 1; j <= i * 2 - 1; j++) {
+                        document.write("*");
+                    }
+                    document.writeln("<br>");
+                }
+            };
+
+        }
+
+        var returnT = funT();
+        returnT(10);
+
+
+
+
+    </script>
+    <body></body>
+</html>
+
+<!--ctrl a 후 ctrl shift b 하면 줄맞춤-->

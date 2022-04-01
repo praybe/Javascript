@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+           in with 키워드
+        */
+
+        var objName = {
+
+            name : "Lee sun sin",
+            nation : "Korea",
+            gender : "male",
+            character : "good"
+
+            };
+
+
+            // in 키워드
+            console.log("nation" in objName);    // true
+            console.log("age" in objName);       // false
+
+
+
+            // with 키워드
+            with(objName){ //이 객체에 property 존부 묻는거
+                console.log("name : " + name);
+                console.log("nation : " + nation);
+                console.log("gender : " + gender);
+                console.log("character : " + character);
+            }
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

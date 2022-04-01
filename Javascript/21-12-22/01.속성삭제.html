@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /*
+            객체에 속성 삭제
+        */
+
+        var objName = {
+
+            name : "Lee sun sin",
+            nation : "Korea",
+            gender : "male",
+            character : "good"
+
+        };
+
+        var print = "";
+        for(var key in objName){
+            print += key + " : " + objName[key] + "\n"
+        }
+        console.log(print);
+
+        
+        objName.talent = "fencing";
+        objName.alphabet = "abcdefg";
+        objName.phoneNumber = "010-1235-4948";
+        print = "";
+        for(var key in objName){
+            print += key + " : " + objName[key] + "\n"
+        }
+        console.log(print);
+        
+
+
+
+        //속성 삭제
+        delete(objName.talent);
+        //delete objName.talent;
+        print =""
+        for(var key in objName){
+            print += key + " : " + objName[key] + "\n"
+        }
+        console.log(print);
+        
+
+        //프로토타입 언어의 중요한 특징 중 하나
+        //즉, 자바스크립트의 중요한 특징
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>jQuery</title>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+   <script>
+      /* window.onload = () => {
+
+            //jQuery함수와 p 선택자
+           //jQuery("p").css("color","red");
+
+           // $ = jQuery 실무에서는 $ 쓴다.
+           $("p").css("color","red");
+
+           var myJQ = $("p");
+           myJQ.css("textDecoration","underLine");
+           myJQ.css("width", "300px").css("border","1px solid orange");
+           
+           $("p").css("fontSize", "2em").css("height", "300px");
+
+       };*/
+
+
+       $(document).ready( () => { //() => { 콜백함수
+                       
+           $("p").css("color","red");
+
+           var myJQ = $("p");
+           myJQ.css("textDecoration","underLine");
+           myJQ.css("width", "300px").css("border","1px solid orange");
+           
+           $("p").css("fontSize", "2em").css("height", "300px");
+
+       }
+
+
+       );
+   </script>
+   
+
+
+</head>
+<body>
+    <p>Hello jQuery</p>
+    
+</body>
+</html>

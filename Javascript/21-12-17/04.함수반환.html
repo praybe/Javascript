@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>함수반환 return함수</title>
+</head>
+<script>
+
+	/*
+		함수반환 return함수
+	*/
+
+
+	var returnFun = function(x){
+		for(let i =1; i<10; i++){
+			console.log(x + "*"+ i + "=" + (x*i));
+		}
+	}
+
+	returnFun(3);
+	returnFun(4);
+
+	function funName(){
+		return function(x){ //함수에 함수를 또 넣음
+			for(let i =1; i<10; i++){
+			console.log(x + "*"+ i + "=" + (x*i));
+			}
+		};
+	}
+
+	var fun1 =funName();
+	fun1(3);
+	
+
+
+
+</script>
+<body>
+	
+</body>
+</html>

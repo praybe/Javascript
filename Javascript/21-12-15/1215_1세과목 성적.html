@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국영수 성적</title>
+    <script>
+
+
+        /*
+            국영수 점수 입력 받아서 
+            콘솔로 합계 평균 출력하기.
+        */
+
+
+       //내 방법
+      /*  var kor = prompt("국어성적 입력");
+        var eng = prompt("영어성적 입력");
+        var math = prompt("수학성적 입력");
+
+        varSum = Number(kor) + Number(eng) + Number(math);
+        console.log("총점: " + varSum);
+
+        varAvg = varSum / 3.0;
+        console.log("평균: " + varAvg);*/
+
+
+
+        
+        //선생님 방법
+        let kor = prompt("국어", "점수를 입력하세요");
+        let eng = prompt("영어", "점수를 입력하세요");
+        let math = prompt("수학", "점수를 입력하세요");
+
+        let total = Number(kor) + Number(eng) + Number(math);
+        let avg = total / 3.0 ; 
+
+        console.log(total + " < 총점 : 평균> " + avg);
+
+        
+
+        /*
+        디버깅 하는 방법:
+            1. 웹브라우저 
+            2. f12
+            3. 디버깅 하고픈 위치 클릭 후 새로고침
+            4. f10 눌러서 디버깅
+        */
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

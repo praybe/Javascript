@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //클로져: 외부변수 살아있다.
+
+
+        /*
+            내부함수: 함수 안의 또 다른 함수
+            바깥 함수 = 객체
+        */
+        function outFun(width, height){ //왼쪽에 있는 거 자체가 객체로 들어감
+
+            console.log("triangle: " + triangle());
+            console.log("rectangle: " + rectangle());
+
+
+            //삼각형 면적 계산
+            function triangle(){
+                return(width*height)/2;
+
+            }
+
+            //사각형 면적 계산
+            function rectangle(){
+                return width*height;
+
+            }
+
+            console.log("triangle: " + triangle());
+            console.log("rectangle: " + rectangle());
+
+        }
+        outFun(3,5);
+
+        //내부함수에서 외부함수는 안됨.
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

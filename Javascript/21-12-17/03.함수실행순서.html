@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<script>
+
+		/*
+			함수 실행 순서
+		*/
+			
+			fun1();		//정상 실행  fun1 run! 
+			fun2();		//오류 발생  fun2(); 실행 오류
+			
+			// 명시(선언)적 함수 생성  전에 함수를 호출해도 사용가능하다.
+			function fun1(){
+				console.log("fun1 run!");
+			}
+			
+			// 익명 함수 생성
+			    // 익명함수는 주소 값(4byte)으로 저장되기 때문에 
+        		// 무조건 함수 선언이 먼저 이루어져야 함수 사용 가능
+			var fun2 = function(){
+				console.log("fun2 run!");
+			}
+			
+			fun2();		// fun2 run! 정상 실행
+
+
+
+</script>
+<body>
+	
+</body>
+</html>

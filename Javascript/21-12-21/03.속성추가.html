@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            객체에 속성 추가 
+        */
+
+        var objName = {
+
+            name : "Lee sun sin",
+            nation : "Korea",
+            gender : "male",
+            character : "good"
+
+        };
+
+        var print = "";
+        for(var key in objName){
+            print += key + " : " + objName[key] + "\n"
+        }
+        console.log(print);
+
+
+
+        //속성 추가 (자바에는 없는 기능)
+        objName.talent = "fencing";
+        objName.alphabet = "abcdefg";
+        objName.phoneNumber = "010-1235-4948";
+
+        print = "";
+        for(var key in objName){
+            print += key + " : " + objName[key] + "\n"
+        }
+        console.log(print);
+        
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

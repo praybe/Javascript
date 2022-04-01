@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>eventHandler</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+
+            //this 는 호출한 애 것이다.
+            $(document).ready(() => {
+
+                //eventHandlers
+                function eventHandler(evnet){
+                    console.log("click !");
+                    console.log("this : " + this);
+
+                    for(var key in event){
+                        console.log(key + " : " + event[key]);
+                    }
+                };
+
+                $("#objDiv").click(eventHandler);
+                $("#objpar").click(eventHandler);
+
+
+            });
+
+            //클릭이벤트 했으니 클릭해줘야 확인 가능
+        </script>
+
+    </head>
+
+    <body>
+
+        <div id="objDiv"> Object Division</div>
+        <p id="objpar"> Object Paragraph</p>
+
+    </body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            String 객체
+        */
+
+        var strEn = "ABCDEFE";
+        var strKo = new String("가나다라마바사아");
+        String.prototype.temp = 123;
+
+        console.log("strEn : " + strEn);
+        console.log("strKo : " + strKo);
+
+        console.log("strEn.length : " + strEn.length);
+        console.log("strKo.length : " + strKo.length);
+
+        console.log("strEn.constructor : " + strEn.constructor);
+        console.log("strKo.constructor : " + strKo.constructor);
+
+        console.log("strEn.temp : " + strEn.temp);
+        console.log("strKo.temp : " + strKo.temp);
+
+        console.log("charAt() : " + strEn.charAt(3)); //0123 index가 0부터 들어감
+        console.log("indexOf() : " + strEn.indexOf("E")); 
+        console.log("lastIndexOf() : " + strEn.lastIndexOf("E")); 
+        console.log("concat() : " + strEn.concat("ffff"));  //붙이는거
+        console.log("replace() : " + strEn.replace("A", "a")); 
+        console.log("split() : " + strEn.split("C")); 
+        console.log("slice() : " + strEn.slice(2, 4)); //앞은 index, 뒤는 앞에서부터 1234 
+        console.log("substring() : " + strEn.substring(1, 4)); 
+
+        console.log("===========================");
+
+        var lc =strEn.toLowerCase(); //전부 소문자
+        console.log("lc : " + lc); 
+        var up =strEn.toUpperCase(); //전부 대문자
+        console.log("up : " + up);  
+
+        //Object객체
+        function ObjName(){
+            this.pro ="property";
+            this.met = function met(){};
+        };
+
+        ObjName.prototype.temp = 123;
+
+        var obj = new ObjName();
+        console.log("obj.contructor : " + obj.constructor);
+        console.log("obj.temp : " + obj.temp);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

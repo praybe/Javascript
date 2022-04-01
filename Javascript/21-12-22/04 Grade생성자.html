@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체지향</title>
+    <script>
+        /*
+            국영수 점수를 받아 총점과 평균을 구하는 함수가 있는
+            Grade 생성자를 만들고 테스트 하시오.
+        */
+
+        function Grade(kor, eng, math){
+
+            this.kor = kor;
+            this.eng = eng;
+            this.math = math;
+            this.total = function(){
+                //this 꼭 붙여야 함
+                return  this.kor+ this.eng+ this.math;
+            }
+            this.avg = function(){
+                return (this.kor+ this.eng+ this.math)/3.0; 
+            }
+        };
+
+        var schoolgrade = new Grade(75, 80, 90);
+        console.log("총점 : " +schoolgrade.total());
+        console.log("평균 : " +schoolgrade.avg());
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            Location 객체
+            현재 접속 중인 페이지 정보
+        */
+
+     
+
+        window.onload = function(){
+
+            location.href= "http://www.yahoo.com"; // 페이지 이동, 속성 형태, 히스토리 기록
+
+            //location.assign("http://www.naver.com");
+            location.replace("http:www.naver.com"); //메서드 형태, 히스토리 기록 안됨 => 이전 페이지 이동 불가
+
+            setTimeout(function(){
+                console.log("Location.reload!")
+                location.reload();
+            }, 3000);
+
+
+        };
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while문</title>
+    <script>
+
+    /*
+        while문    
+    */
+
+
+    var varNum = 0;
+    var varSum = 0;
+
+    while(varNum < 10){
+
+        console.log("varNUM : " + varNum);
+        varSum += varNum;
+        varNum++;
+    }
+    console.log("varSum : " + varSum);
+
+    
+
+    /*
+        do ~ while문    
+    */
+
+    var varNumber = 1234;
+
+    do{  //while문과 다른 점은 무조건 조건문을 탄다.
+        console.log("varNumber : " + varNumber);
+        varNumber = varNumber + 10000;
+
+    } while(varNumber > 11234)
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

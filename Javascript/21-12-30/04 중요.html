@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>중요한거래</title>
+        <script>
+            //전부 메모리에 올려서 
+            // body 부분을 컨트롤 하겠다.
+            window.onload = () => {
+                //submit버튼을 sbmBtn으로 칭하겠다.
+                let sbmBtn = document.querySelector("#sbmBtn"); 
+                //반드시 #을 붙일 것.
+
+                sbmBtn.onclick = () =>{
+                    if(document.getElementById("id").value ==""){
+                        alert("유저 아이디 없음"); //유효성 검사
+                    }else if(document.getElementById("pw").value ==""){
+                        alert("비밀번호를 입력하세요");
+                    }else{
+                        //id와 pw 채워졌을 경우
+                        alert("로그인");
+                        //이게 핵심
+                        document.getElementById("loginForm").submit();
+                    }
+
+                };
+
+                };
+
+        
+        </script>
+
+    </head>
+    <body>
+       <form id = "loginForm" action="http://www.daum.net">
+           user id : <input id="id" name="id" type="text"><br>
+           user pw : <input id="pw" name="pw" type="password"><br>
+           <input id="sbmBtn" type="button" value="제출">
+           <input id="reset" type="button" value="취소">
+          
+       </form>
+
+
+    </body>
+</html>

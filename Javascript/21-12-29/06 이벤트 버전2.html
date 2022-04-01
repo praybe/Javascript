@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>온클릭 두번째 방법</title>
+
+
+        <style>
+            #cEvent {
+                width: 200px;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+                font-size: 1.2em;
+                background-color: #f00;
+                color: #fff;
+                font-weight: bolder;
+            }
+        </style>
+
+            
+    <script>
+
+        //window.onload = () => {
+            let ce = document.getElementById("cEvent");
+
+            ce.onclick = () => {
+                console.log("click!")
+            }
+        //};
+
+        //window.onload =() =>{}  부분을 주석 처리하면 안 돌아간다.
+        // 이유는
+        // #cEvent를 위에서부터 읽는데
+        // 읽으려고 보니까 ce가 없어서 null이 된다.
+        // 주석상태에서 js 코드를 body 아래에 두면 읽을 수 있다.
+
+
+    </script>
+
+
+    </head>
+    <body>
+        <div id = "cEvent"> Click event</div>
+        
+    </body>
+
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>18-3 자주사용하는 선택자</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready( function() {
+
+                let wrapObj = $("#wrap");
+                let divObj = $("<div> Hello jQuery </div>");
+                divObj.appendTo(wrapObj);
+                divObj.css("background","#ff0000");
+
+                // <a>객체 생성 및 추가
+				var aObj = $("<a href='http://www.google.com' target='_blank'> google </a><br>");
+				aObj.appendTo(wrapObj);
+                //appendTo 내가 자식으로 들어가겠다.
+
+                //이미지넣기
+                var imgObj = $("<img src='img/logo.png'/><br>");
+				imgObj.appendTo(wrapObj);
+
+                var tempObj = {
+                    src : "img/arm_mbed.png",
+                    width : 297,
+                    height : 124,
+                    border : "5px"
+
+                }
+
+                let imgAObj = $("<img>", tempObj)
+                imgAObj.appendTo(wrapObj);
+
+
+
+            });
+        </script>
+    </head>
+    <body>
+       <div id="wrap">
+
+       </div>
+
+    </body>
+</html>
